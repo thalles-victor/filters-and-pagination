@@ -24,6 +24,13 @@ Antes de ir para etapa de executar o projeto, instale as dependências.
 npm install
 ```
 
+## Subindo o banco de dados com o docker
+para subir o banco de dados com o docker rode o comando:
+
+```sh
+docker compose up -d
+```
+
 ## Executa todas as migrations
 Assim que já tiver arquivos de migration criados, você pode executar os script abaixo para criar as migrations
 
