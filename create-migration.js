@@ -2,7 +2,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const migrationsDir = path.join(__dirname, "migrations");
+const migrationsDir = path.join(__dirname, "src", "migrations");
 
 // Gera timestamp no formato YYYYMMDDHHMMSS
 function getTimestamp() {
