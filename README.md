@@ -69,7 +69,7 @@ limit → Quantidade de itens por página (default: 10)
 
 page → Número da página (default: 1)
 ```sh
-curl http://localhost:3333/cars?brand=Ford&model=Model%20A&year=2020&minPrice=20000&maxPrice=50000&limit=5&page=2
+curl "http://localhost:3333/cars?brand=Ford&model=Model&year=2020&minPrice=20000&maxPrice=50000&limit=5&page=2"
 ```
 
 a resposta vai ser como no exemplo abaixo:
@@ -100,4 +100,41 @@ a resposta vai ser como no exemplo abaixo:
     "limit": 5
   }
 }
+```
+
+Parametros no modelo REST/RESTFUL
+
+route params
+```
+/users/:id -> users/0 | users/1
+/users/:name -> users/thalles | users/jose
+```
+
+```json
+body params
+{
+  "name": "thalles",
+  "email": "thalles@gmail.com"
+}
+```
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<user>
+  <name>thalles</name>
+  <email>thalles@gmail.com</email>
+</user>
+
+```
+
+headers params
+```
+Authorization: Bearer token.....
+Content-Type: "application/json" "text" "xml"
+```
+
+query params
+```
+/users?page=1&limit=100&name=jose&utm_ad=
+/pages
 ```
